@@ -1,0 +1,23 @@
+.tasks_list_group_wrapper {
+  overflow: scroll;
+  height: 80%;
+}
+
+.tasks_list_group_wrapper::-webkit-scrollbar {
+  width: 2px;
+  height: 80%;
+}
+
+.tasks_list_group_wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  background: transparent;
+}
+
+.tasks_list_group_wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3rem;
+}
+
+.tasks_list_group_wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

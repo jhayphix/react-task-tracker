@@ -1,0 +1,76 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Learn to dance",
+      "date": "2022-10-28",
+      "time": "16:31",
+      "reminder": true,
+      "completed": false
+    },
+    {
+      "id": 2,
+      "task": "Visit Lucid (updated)",
+      "date": "2022-10-28",
+      "time": "03:10",
+      "reminder": false,
+      "completed": false
+    },
+    {
+      "id": 3,
+      "task": "Revise my books",
+      "date": "2022-10-28",
+      "time": "05:10",
+      "reminder": true,
+      "completed": false
+    },
+    {
+      "task": "Learn my books",
+      "date": "2022-10-29",
+      "time": "02:28",
+      "reminder": true,
+      "completed": false,
+      "id": 4
+    },
+    {
+      "task": "Rest",
+      "date": "2022-10-28",
+      "time": "02:31",
+      "reminder": true,
+      "completed": false,
+      "id": 5
+    },
+    {
+      "task": "Play",
+      "date": "2022-10-28",
+      "time": "02:31",
+      "reminder": false,
+      "completed": false,
+      "id": 6
+    },
+    {
+      "task": "Build react projects",
+      "date": "2022-10-28",
+      "time": "13:21",
+      "reminder": false,
+      "completed": true,
+      "id": 7
+    },
+    {
+      "task": "Learn data base",
+      "date": "2022-10-30",
+      "time": "08:27",
+      "reminder": true,
+      "completed": true,
+      "id": 8
+    },
+    {
+      "task": "Relax for now",
+      "date": "2022-10-29",
+      "time": "02:48",
+      "reminder": false,
+      "completed": true,
+      "id": 9
+    }
+  ]
+}

@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+:root {
+  --dark-color: rgba(29, 33, 35);
+  --dark-variant: rgba(40, 42, 44);
+  --dark-light: rgba(45, 50, 51);
+  --secondary-color: rgba(254, 141, 81);
+  --white-color: rgba(253, 255, 255);
+  --header-height: 15%;
+  --main-body-height: calc(100% - var(--header-height));
+  --border-radius: 10px;
+
+  --transition: all 0.3s ease-in;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  width: 100vw;
+  background: var(--dark-color);
+}
+a {
+  text-decoration: none;
+}
+.btn,
+a,
+i {
+  user-select: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*  */
+.j-bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+.j-text-secondary {
+  color: var(--secondary-color) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.j-bg-dark {
+  background-color: var(--dark-color) !important;
+}
+.j-text-dark {
+  color: var(--dark-color) !important;
+}
+
+.j-bg-dark-variant {
+  background-color: var(--dark-variant) !important;
+}
+.j-text-dark-variant {
+  color: var(--dark-variant) !important;
+}
+
+.j-bg-dark-light {
+  background-color: var(--dark-light) !important;
+}
+.j-text-dark-light {
+  color: var(--dark-light) !important;
+}
+
+.j-btn-secondary,
+.j-btn-outline-secondary:hover {
+  background-color: var(--secondary-color) !important;
+  color: white !important;
+  border: 1px solid transparent !important;
+  transition: var(--transition);
+}
+.j-btn-secondary:hover,
+.j-btn-outline-secondary {
+  background: initial !important;
+  border: 1px solid var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+/* ------------- */
+
+.app-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.app-content-wrapper {
+  height: 95%;
+  background-color: var(--dark-light);
+  border-radius: var(--border-radius);
+  color: white;
+  overflow: hidden;
+}
+
+.task-main-wrapper {
+  height: 90%;
+  overflow: scroll;
+  border-radius: var(--border-radius);
+}
+/* width */
+.task-main-wrapper::-webkit-scrollbar {
+  width: 2px;
+  height: 80%;
+}
+
+/* Track */
+.task-main-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  background: transparent;
+}
+
+/* Handle */
+.task-main-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3rem;
+}
+
+/* Handle on hover */
+.task-main-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Task Item */
+.task-item {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  cursor: default;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+.task-item:hover {
+  background-color: var(--dark-variant);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task-item-reminder {
+  border-left: 5px solid var(--secondary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.remove-task-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.remove-task-btn:hover {
+  border: 1px solid red;
+  border-radius: var(--border-radius);
+}
+.task-item:hover .remove-task-btn {
+  opacity: initial;
+}
+
+.task-item-text-truncate {
+  max-width: 21rem;
+}
+
+/* Larger Screens */
+@media (min-width: 1088px) {
+  .task-item-text-truncate {
+    max-width: 24rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Small screens */
+@media (max-width: 840px) {
+  .task-item-text-truncate {
+    max-width: 18rem;
+  }
+  .remove-task-btn {
+    border: none;
+    background: none;
+    opacity: 1;
+  }
+}
+@media (max-width: 504px) {
+  .app-content-wrapper {
+    height: 100%;
+  }
+  .task-item-text-truncate {
+    max-width: 16rem;
+  }
+}
+@media (max-width: 460px) {
+  .task-item-text-truncate {
+    max-width: 12rem;
   }
 }
